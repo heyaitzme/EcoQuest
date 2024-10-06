@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="header">
+    <image src="/assets/icons/logo.png" class="logo" />
+    <text class="title">EcoQuest</text>
+  </view>
+
+  <view class="user-summary">
+    <text class="greeting">Hello, {{username}}!</text>
+    <text class="points">Points: {{points}}</text>
+    <text class="tier">Current Tier: {{tier}}</text>
+  </view>
+
+  <view class="menu">
+    <navigator url="/pages/quiz/quiz" class="menu-item">
+      <image src="/assets/icons/quiz.png" class="icon" />
+      <text>Daily Quiz</text>
+    </navigator>
+
+    <navigator url="/pages/games/games" class="menu-item">
+      <image src="/assets/icons/games.png" class="icon" />
+      <text>Games</text>
+    </navigator>
+
+    <navigator url="/pages/challenges/challenges" class="menu-item">
+      <image src="/assets/icons/challenges.png" class="icon" />
+      <text>Daily Challenges</text>
+    </navigator>
+
+    <navigator url="/pages/community/community" class="menu-item">
+      <image src="/assets/icons/community.png" class="icon" />
+      <text>Community</text>
+    </navigator>
+  </view>
+
+  <view class="footer">
+    <navigator url="/pages/profile">
+      <text>Profile</text>
+    </navigator>
+  </view>
+</view>

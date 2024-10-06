@@ -1,0 +1,25 @@
+<view class="community-container">
+  <!-- Create New Post Button -->
+  <div class="top-bar">
+    <button class="new-post-btn" bindtap="createNewPost">
+      +
+    </button>
+  </div>
+  <!-- Scrolling View for Posts -->
+  <scroll-view type="list" class="posts-scroll" scroll-y="true">
+    <block wx:for="{{posts}}" wx:key="id">
+      <view class="post-card">
+        <view class="post-header">
+          <image class="avatar" src="{{item.avatarUrl}}" />
+          <text class="username">{{item.username}}</text>
+        </view>
+        <view class="post-content">
+          <text>{{item.content}}</text>
+        </view>
+        <view class="post-footer">
+          <text class="timestamp">{{item.timestamp}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

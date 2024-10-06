@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="header">
+    <text class="title">Games</text>
+  </view>
+
+  <view class="games-grid">
+    <!-- Game 1 -->
+    <view class="game-card">
+      <image src="/images/game-icon1.png" class="game-icon"></image>
+      <view class="game-info">
+        <text class="game-title">Eco Trivia</text>
+        <text class="game-description">Test your knowledge about the environment!</text>
+        <button bindtap="startEcoTrivia" class="game-button">Play Now</button>
+      </view>
+    </view>
+
+    <!-- Game 2 -->
+    <view class="game-card">
+      <image src="/images/game-icon2.png" class="game-icon"></image>
+      <view class="game-info">
+        <text class="game-title">Recycling Puzzle</text>
+        <text class="game-description">Solve puzzles by sorting recyclables correctly.</text>
+        <button bindtap="startRecyclingPuzzle" class="game-button">Play Now</button>
+      </view>
+    </view>
+
+    <!-- Game 3 -->
+    <view class="game-card">
+      <image src="/images/game-icon3.png" class="game-icon"></image>
+      <view class="game-info">
+        <text class="game-title">Sustainability Quiz</text>
+        <text class="game-description">How much do you know about sustainable living?</text>
+        <button bindtap="startSustainabilityQuiz" class="game-button">Play Now</button>
+      </view>
+    </view>
+    
+    <!-- Add more game cards as needed -->
+  </view>
+</view>

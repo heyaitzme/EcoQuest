@@ -1,0 +1,33 @@
+<view class="quiz-container">
+  <!-- Header with Progress -->
+  <view class="header">
+    <progress class="progress-bar" percent="{{progress}}" show-info />
+    <text class="level-title">Level {{currentLevel}}: Environmental Quiz</text>
+  </view>
+
+  <!-- Question Section -->
+  <view class="question-section" animation="{{fadeInAnimation}}">
+    <text class="question-text">{{currentQuestion.question}}</text>
+  </view>
+
+  <!-- Options Section -->
+  <view class="options-section">
+    <block wx:for="{{currentQuestion.options}}" wx:key="index">
+      <button class="option-button" bindtap="selectOption" data-index="{{index}}" animation="{{shakeAnimation}}">
+        {{item}}
+      </button>
+    </block>
+  </view>
+
+  <!-- Next Button -->
+  <button class="next-button" bindtap="nextQuestion" hidden="{{!showNextButton}}">
+    Next
+  </button>
+
+  <!-- Confetti Celebration -->
+  <view class="confetti-container" hidden="{{!showConfetti}}">
+    <block wx:for="{{[0,1,2,3,4,5,6,7,8,9,10]}}" wx:key="index">
+      <view class="confetti" style="left: {{index*10}}%;"></view>
+    </block>
+  </view>
+</view>

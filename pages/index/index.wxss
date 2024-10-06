@@ -1,0 +1,83 @@
+/* Global styles */
+.container {
+  padding: 20rpx;
+  margin-top: 250rpx;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+
+.logo {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.title {
+  font-size: 48rpx;
+  color: #2ecc71;
+}
+
+.user-summary {
+  margin: 30rpx 0;
+  text-align: center;
+  background-image: ;
+}
+
+.greeting {
+  font-size: 36rpx;
+  color: #333;
+}
+
+.points,
+.tier {
+  font-size: 32rpx;
+  color: #555;
+  margin-top: 10rpx;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+
+.menu-item {
+  width: 335rpx;
+  height: 180rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  padding: 20rpx;
+  background-color: #f9f9f9;
+  border-radius: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centers content vertically */
+}
+
+.icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 10rpx;
+}
+
+.menu-item text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.footer {
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.footer text {
+  color: #999;
+  font-size: 28rpx;
+}

@@ -24,7 +24,6 @@
 .user-summary {
   margin: 30rpx 0;
   text-align: center;
-  background-image: ;
 }
 
 .greeting {

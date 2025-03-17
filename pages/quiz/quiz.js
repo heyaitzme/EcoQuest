@@ -1,144 +1,188 @@
+const app = getApp()
+
 Page({
   data: {
-    currentLevel: 1,
-    progress: 0,
-    currentQuestionIndex: 0,
-    questions: [
-      {
-        question: "What is the primary greenhouse gas responsible for global warming?",
-        options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
-        correctAnswer: 1,
-      },
-      // More questions...
-    ],
-    showNextButton: false,
-    showConfetti: false,
-    shakeAnimation: {},
-    fadeInAnimation: {},
-    correctSound: null,
-    incorrectSound: null,
-    confettiSound: null,
-    userPoints: 0,
-    badges: [],
+    loading: true,
+    score: 0,
+    questions: [[], [], []], // 3 difficulties, 4 questions each
+    showModal: false,
+    currentQuestion: null,
+    selectedAnswer: null,
+    currentPosition: null,
+    error: ''
   },
 
   onLoad() {
-    this.setQuestion();
-    this.initAnimations();
-    this.initSounds();
+    this.loadDailyQuiz()
+    this.loadUserScore()
   },
 
-  initAnimations() {
-    this.shakeAnimation = wx.createAnimation({
-      duration: 100,
-      timingFunction: 'ease',
-    });
+  async loadDailyQuiz() {
+    console.log("loadDailyQuiz called!")
+    this.setData({ loading: true, error: '' })
+    try {
+      const { result } = await wx.cloud.callFunction({
+        name: 'updateDailyQuiz'
+      })
+      if (result.success) {
+        // Use data directly from cloud function
+        let quizData = result.data
+        // Handle array response from existing quiz check
+        if (Array.isArray(quizData)) {
+          quizData = quizData[0]
+        }
+        this.processQuizData(quizData)
+        console.log(quizData)
+      } else {
+        throw new Error(result.message)
+      }
+    } catch (err) {
+      console.error('Quiz load error:', err)
+      this.setData({ 
+        error: 'Failed to load daily quiz',
+        loading: false
+      })
+    }
+  },
 
-    this.fadeInAnimation = wx.createAnimation({
-      duration: 500,
-      timingFunction: 'ease-in',
-    });
+  processQuizData(quizData) {
+    // Ensure proper 3x4 grid structure
+    const formattedQuestions = [[[], [], [], []], [[], [], [], []], [[], [], [], []]]
+  
+    quizData.questions.forEach((difficultyRow, rowIndex) => {
+      difficultyRow.forEach((question, colIndex) => {
+        // Ensure we have 3 rows with 4 columns each
+        if (rowIndex < 3 && colIndex < 4) {
+          formattedQuestions[rowIndex][colIndex] = {
+            ...question,
+            answered: quizData.answered[rowIndex][colIndex] || false,
+            value: (colIndex + 1) * 100 * (rowIndex + 1)
+          }
+        }
+      })
+    })
+  
+    this.setData({
+      questions: formattedQuestions,
+      loading: false
+    })
+  },
+
+  async loadUserScore() {
+    const { result } = await wx.cloud.callFunction({
+      name: 'user',
+      data: { action: 'getScore' }
+    })
+
+    this.setData({ 
+      score: (result.data?.daily_points || 0),
+      loading: false
+    })
+  },
+
+  showQuestion(e) {
+    const { row, col } = e.currentTarget.dataset
+    const question = this.data.questions[row][col]
+    
+    if (question.answered) return
 
     this.setData({
-      fadeInAnimation: this.fadeInAnimation.opacity(1).step().export(),
-    });
+      showModal: true,
+      currentQuestion: question,
+      currentPosition: { row, col }
+    })
   },
 
-  initSounds() {
-    this.correctSound = wx.createInnerAudioContext();
-    this.correctSound.src = '/assets/correct.mp3';
-
-    this.incorrectSound = wx.createInnerAudioContext();
-    this.incorrectSound.src = '/assets/incorrect.mp3';
-
-    this.confettiSound = wx.createInnerAudioContext();
-    this.confettiSound.src = '/assets/confetti.mp3';
+  handleAnswer(e) {
+    this.setData({ selectedAnswer: parseInt(e.detail.value) })
   },
 
-  setQuestion() {
-    this.fadeInAnimation.opacity(0).step({ duration: 0 });
-    this.setData({
-      currentQuestion: this.data.questions[this.data.currentQuestionIndex],
-      showNextButton: false,
-      showConfetti: false,
-      fadeInAnimation: this.fadeInAnimation.opacity(1).step().export(),
-    });
-  },
-
-  selectOption(e) {
-    const selectedIndex = e.currentTarget.dataset.index;
-    const isCorrect = selectedIndex === this.data.currentQuestion.correctAnswer;
+  submitAnswer() {
+    const { currentQuestion, selectedAnswer, currentPosition } = this.data;
+    if (selectedAnswer === null) {
+      wx.showToast({ title: 'Please select an answer', icon: 'none' });
+      return;
+    }
+  
+    // Parse the correct answer from currentQuestion.answer
+    let correctIndex;
+    const answer = currentQuestion.answer.toString().trim();
+  
+    // Handle answers like "(A)", "A", "1", or "ans: A"
+    const match = answer.match(/$$?([A-Da-d])$$?|ans:\s*([A-Da-d])|(\d+)/);
+    if (match) {
+      let letterOrNumber = match[1] || match[2] || match[3];
+      if (letterOrNumber) {
+        letterOrNumber = letterOrNumber.toUpperCase();
+        if (['A', 'B', 'C', 'D'].includes(letterOrNumber)) {
+          correctIndex = currentQuestion.choices.findIndex(choice => 
+            choice.startsWith(`${letterOrNumber}.`)
+          );
+        } else if (!isNaN(letterOrNumber)) {
+          // Handle 1-based numeric answers
+          correctIndex = parseInt(letterOrNumber) - 1;
+        }
+      }
+    }
+  
+    // Fallback to 0 if parsing fails
+    correctIndex = correctIndex !== undefined ? correctIndex : 0;
+  
+    const isCorrect = selectedAnswer === correctIndex;
+  
     if (isCorrect) {
-      this.handleCorrectAnswer();
-    } else {
-      this.handleIncorrectAnswer();
-    }
-  },
-
-  handleCorrectAnswer() {
-    this.correctSound.play();
-    this.confettiSound.play();
-    const newPoints = this.data.userPoints + 10;
-    this.setData({
-      progress: this.data.progress + 20,
-      showNextButton: true,
-      showConfetti: true,
-      userPoints: newPoints,
-    });
-
-    if (newPoints >= 50) {
-      this.awardBadge('Eco Warrior');
-    }
-  },
-
-  handleIncorrectAnswer() {
-    this.incorrectSound.play();
-    this.shakeAnimation
-      .translateX(-10)
-      .step()
-      .translateX(10)
-      .step()
-      .translateX(-10)
-      .step()
-      .translateX(10)
-      .step()
-      .translateX(0)
-      .step();
-    this.setData({
-      shakeAnimation: this.shakeAnimation.export(),
-    });
-    wx.showToast({
-      title: 'Try again!',
-      icon: 'none',
-    });
-  },
-
-  awardBadge(badgeName) {
-    const badges = this.data.badges;
-    if (!badges.includes(badgeName)) {
-      badges.push(badgeName);
+      // Update local state and score
+      const newQuestions = [...this.data.questions];
+      newQuestions[currentPosition.row][currentPosition.col].answered = true;
+      const newScore = this.data.score + currentQuestion.value;
+  
+      // Update backend
+      wx.cloud.callFunction({
+        name: 'user',
+        data: { 
+          action: 'updateScore',
+          points: currentQuestion.value
+        }
+      });
+  
       this.setData({
-        badges: badges,
+        questions: newQuestions,
+        score: newScore,
+        showModal: false
       });
-      wx.showToast({
-        title: `You've earned the "${badgeName}" badge!`,
-        icon: 'success',
-      });
+    } else {
+      wx.showToast({ title: 'Incorrect! Try again', icon: 'none' });
     }
   },
 
-  nextQuestion() {
-    if (this.data.currentQuestionIndex < this.data.questions.length - 1) {
-      this.setData({
-        currentQuestionIndex: this.data.currentQuestionIndex + 1,
-      });
-      this.setQuestion();
-    } else {
-      wx.showToast({
-        title: 'Quiz Completed!',
-        icon: 'success',
-      });
-      this.awardBadge('Environmental Quiz Master');
-    }
+  closeModal() {
+    this.setData({ showModal: false })
   },
-});
+
+  refreshQuiz() {
+    this.setData({ loading: true })
+    this.loadDailyQuiz()
+  },
+
+  async resetUsedQuestions() {
+    try {
+      const { result } = await wx.cloud.callFunction({
+        name: 'resetQuiz'
+      })
+      
+      if (result.success) {
+        wx.showToast({ title: 'Quiz reset!' })
+        this.loadDailyQuiz()
+        this.setData({ score: 0 })
+      } else {
+        throw new Error(result.message)
+      }
+    } catch (err) {
+      console.error('Reset error:', err)
+      wx.showToast({
+        title: 'Reset failed: ' + err.message,
+        icon: 'none'
+      })
+    }
+  }
+})

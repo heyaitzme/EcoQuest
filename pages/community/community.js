@@ -1,42 +1,99 @@
+wx.cloud.init();
+const db=wx.cloud.database();
 Page({
   data: {
     posts: [],
   },
 
   onLoad: function () {
-    this.loadPosts();
+    this.fetchPosts();
   },
 
   // Load posts from the database or backend
-  loadPosts: function () {
-    // Simulating a database call to load posts
-    const posts = [
-      {
-        id: 1,
-        avatarUrl: '/images/avatar1.png',
-        username: 'EcoWarrior1',
-        content: 'Just completed my daily challenge!',
-        timestamp: '2024-08-31 14:20',
+  fetchPosts: function () {
+    db.collection('Posts').orderBy('timestamp', 'desc').get({
+      success: res => {
+        this.setData({
+          posts: res.data
+        });
       },
-      {
-        id: 2,
-        avatarUrl: '/images/avatar2.png',
-        username: 'EcoHero',
-        content: 'Recycled 50 bottles today!',
-        timestamp: '2024-08-31 13:45',
-      },
-      // Additional posts...
-    ];
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: 'Failed to load posts'
+        });
+        console.error('[Database] [Fetch] failed: ', err);
+      }
+    });
+  },
+  submitPost(e) {
+    const content = e.detail.value.content.trim();
+    if (!content) {
+      wx.showToast({
+        icon: 'none',
+        title: 'Post content cannot be empty'
+      });
+      return;
+    }
 
-    this.setData({
-      posts: posts,
+    // Assume user info is available
+    const author = wx.getStorageSync('userInfo')?.nickName || 'Anonymous';
+
+    db.collection('Posts').add({
+      data: {
+        content,
+        author,
+        timestamp: db.serverDate(),
+        likes: 0
+      },
+      success: res => {
+        wx.showToast({
+          title: 'Post successful',
+          icon: 'success'
+        });
+        this.fetchPosts(); // Refresh the posts
+        console.log("Post successful!", res);
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: 'Failed to post'
+        });
+        console.error('[Database] [Add] failed: ', err);
+      }
     });
   },
 
-  // Navigate to Create Post Page
-  createNewPost: function () {
-    wx.navigateTo({
-      url: '/pages/createPost/createPost',
+  likePost(e) {
+    const postId = e.currentTarget.dataset.id;
+    const postIndex = this.data.posts.findIndex(post => post._id === postId);
+    if (postIndex === -1) return;
+
+    const newLikes = this.data.posts[postIndex].likes + 1;
+
+    db.collection('Posts').doc(postId).update({
+      data: {
+        likes: newLikes
+      },
+      success: res => {
+        const updatedPosts = [...this.data.posts];
+        updatedPosts[postIndex].likes = newLikes;
+        this.setData({
+          posts: updatedPosts
+        });
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: 'Failed to like post'
+        });
+        console.error('[Database] [Update] failed: ', err);
+      }
     });
   },
+
+  formatTime(timestamp) {
+    const date = timestamp ? timestamp.toDate() : new Date();
+    return date.toLocaleString();
+  }
 });

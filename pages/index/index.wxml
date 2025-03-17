@@ -5,9 +5,10 @@
   </view>
 
   <view class="user-summary">
-    <text class="greeting">Hello, {{username}}!</text>
-    <text class="points">Points: {{points}}</text>
-    <text class="tier">Current Tier: {{tier}}</text>
+    <text class="greeting">Hello, {{userName}}!\n</text>
+    <text class="points">Points: {{userPoints}}\n</text>
+    <text class="tier">Current Tier: {{userTier}}</text>
+    <!-- <navigator url="/$weda_root/packages/B1lwjM5Y/pages/index/index">跳转至用户中心</navigator> -->
   </view>
 
   <view class="menu">
@@ -16,14 +17,9 @@
       <text>Daily Quiz</text>
     </navigator>
 
-    <navigator url="/pages/games/games" class="menu-item">
-      <image src="/assets/icons/games.png" class="icon" />
-      <text>Games</text>
-    </navigator>
-
-    <navigator url="/pages/challenges/challenges" class="menu-item">
-      <image src="/assets/icons/challenges.png" class="icon" />
-      <text>Daily Challenges</text>
+    <navigator url="/pages/leaderboard/leaderboard" class="menu-item">
+      <image src="" class="icon" />
+      <text>leaderboard</text>
     </navigator>
 
     <navigator url="/pages/community/community" class="menu-item">

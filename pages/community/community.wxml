@@ -1,25 +1,27 @@
-<view class="community-container">
-  <!-- Create New Post Button -->
-  <div class="top-bar">
-    <button class="new-post-btn" bindtap="createNewPost">
-      +
-    </button>
-  </div>
-  <!-- Scrolling View for Posts -->
-  <scroll-view type="list" class="posts-scroll" scroll-y="true">
-    <block wx:for="{{posts}}" wx:key="id">
-      <view class="post-card">
+<view class="container">
+  <!-- New Post Input -->
+  <form bindsubmit="submitPost" class="new-post">
+    <input name="content" placeholder="What's on your mind?" required />
+    <button formType="submit">Post</button>
+  </form>
+
+  <!-- Posts List -->
+  <view class="posts">
+    <block wx:for="{{posts}}" wx:key="_id">
+      <view class="post">
         <view class="post-header">
-          <image class="avatar" src="{{item.avatarUrl}}" />
-          <text class="username">{{item.username}}</text>
+          <text class="author">{{item.author}}</text>
+          <text class="timestamp">{{formatTime(item.timestamp)}}</text>
         </view>
         <view class="post-content">
           <text>{{item.content}}</text>
         </view>
-        <view class="post-footer">
-          <text class="timestamp">{{item.timestamp}}</text>
+        <view class="post-actions">
+          <button bindtap="likePost" data-id="{{item._id}}">
+            👍 {{item.likes}}
+          </button>
         </view>
       </view>
     </block>
-  </scroll-view>
+  </view>
 </view>

@@ -1,0 +1,44 @@
+.container {
+  padding: 20rpx;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 40rpx;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  font-weight: bold;
+  border-bottom: 1rpx solid #eee;
+}
+
+.list {
+  height: calc(100vh - 120rpx);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.username {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.rank, .score {
+  min-width: 80rpx;
+  text-align: center;
+}

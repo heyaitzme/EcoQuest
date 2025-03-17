@@ -1,28 +1,17 @@
-// home.js
 Page({
   data: {
-    username: "EcoWarrior",
-    points: 0,
-    tier: "Green Leaf",
+    userName: '',
+    userPoints: 0,
+    userTier: ''
   },
 
   onLoad: function () {
-    // Fetch user data from storage or backend API
-    this.getUserData();
-  },
-
-  getUserData: function () {
-    // For demonstration, using mock data. Replace with an API call.
-    const userData = {
-      username: "EcoWarrior",
-      points: 150,
-      tier: "Green Leaf",
-    };
-
+    // Access global data and update the page's data
+    const app = getApp();
     this.setData({
-      username: userData.username,
-      points: userData.points,
-      tier: userData.tier,
+      userName: app.globalData.userName,
+      userPoints: app.globalData.userPoints,
+      userTier: app.globalData.userTier
     });
-  },
+  }
 });

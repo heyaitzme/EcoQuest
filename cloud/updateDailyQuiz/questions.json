@@ -1,0 +1,995 @@
+[
+  {
+    "question": "Which organization proposed the SDGs?",
+    "choices": [
+      "A. United Nations",
+      "B. World Bank",
+      "C. Global Citizens",
+      "D. Citi Bank"
+    ],
+    "answer": 1,
+    "difficulty": 1,
+    "available": true,
+    "id": 1
+  },
+  {
+    "question": "Which country consumes the most energy in the world?",
+    "choices": [
+      "A. China",
+      "B. Russia",
+      "C. India",
+      "D. United States"
+    ],
+    "answer": 4,
+    "difficulty": 1,
+    "available": true,
+    "id": 2
+  },
+  {
+    "question": "In which country was COP27 hosted?",
+    "choices": [
+      "A. USA",
+      "B. China",
+      "C. Egypt",
+      "D. Switzerland"
+    ],
+    "answer": 3,
+    "difficulty": 1,
+    "available": true,
+    "id": 3
+  },
+  {
+    "question": "What is the goal of the Paris Agreement?",
+    "choices": [
+      "A. Making developed countries help developing countries in efforts to limit emissions",
+      "B. Limit global warming well below 2 degrees celcius",
+      "C. To accomplish all SDG goals by 2100",
+      "D. Provide 2 trillion USD yearly to offset carbon emissions"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 4
+  },
+  {
+    "question": "How many percent of the earth is covered by water?",
+    "choices": [
+      "A. 67%",
+      "B. 70%",
+      "C. 80%",
+      "D. 71%"
+    ],
+    "answer": 4,
+    "difficulty": 1,
+    "available": true,
+    "id": 5
+  },
+  {
+    "question": "How many percent of the earth is covered by forests?",
+    "choices": [
+      "A. 6%",
+      "B. 20%",
+      "C. 30%",
+      "D. 40%"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 6
+  },
+  {
+    "question": "How much of all water on earth is fresh water?",
+    "choices": [
+      "A. 0.5%",
+      "B. 30%",
+      "C. 2.5%",
+      "D. 7%"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 7
+  },
+  {
+    "question": "How many SDG goals are there?",
+    "choices": [
+      "A. 15",
+      "B. 16",
+      "C. 17",
+      "D. 169"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 8
+  },
+  {
+    "question": "Which industry sector emits the second most greenhouse gases?",
+    "choices": [
+      "A. Energy",
+      "B. Agriculture",
+      "C. Manufacturing and Construction",
+      "D. Transport"
+    ],
+    "answer": 4,
+    "difficulty": 2,
+    "available": true,
+    "id": 9
+  },
+  {
+    "question": "Which country emits the third most CO2?",
+    "choices": [
+      "A. Japan",
+      "B. Germany",
+      "C. USA",
+      "D. India"
+    ],
+    "answer": 4,
+    "difficulty": 2,
+    "available": true,
+    "id": 10
+  },
+  {
+    "question": "How much does space cooling consume as a percentage of total electric demand?",
+    "choices": [
+      "A. 0.3%",
+      "B. 0.7%",
+      "C. 10%",
+      "D. 30%"
+    ],
+    "answer": 3,
+    "difficulty": 3,
+    "available": true,
+    "id": 11
+  },
+  {
+    "question": "Which country is expected to meet all SDG goals first?",
+    "choices": [
+      "A. Finland",
+      "B. Luxemburg",
+      "C. Morocco",
+      "D. Sweden"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 12
+  },
+  {
+    "question": "How many states have signed the Paris Agreement? (Feb 2023)",
+    "choices": [
+      "A. 187",
+      "B. 194",
+      "C. 191",
+      "D. 109"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 13
+  },
+  {
+    "question": "How much does energy contribute to our total CO2 emission?",
+    "choices": [
+      "A. 20%",
+      "B. 40%",
+      "C. 60%",
+      "D. 80%"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 14
+  },
+  {
+    "question": "How much electricity does lighting use as a percent of global electric demand?",
+    "choices": [
+      "A. 1%",
+      "B. 10%",
+      "C. 15%",
+      "D. 0.5%"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 15
+  },
+  {
+    "question": "What percent of electricity comes from burning fossil fuels?",
+    "choices": [
+      "A. 70.3%",
+      "B. 84.3%",
+      "C. 68.9%",
+      "D. 69%"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 16
+  },
+  {
+    "question": "Why do gas companies \"flare\" gas? (choose 2)",
+    "choices": [
+      "A. To cause a global economic crash",
+      "B. To demonstrate wealth",
+      "C. To prevent methane from entering the atmosphere",
+      "D. To signal armies to attack"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 17
+  },
+  {
+    "question": "Which part of coral is affected by ocean acidification?",
+    "choices": [
+      "A. Skeleton",
+      "B. Zooxanthellae",
+      "C. larvae",
+      "D. Color"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 18
+  },
+  {
+    "question": "What causes ocean acidification chemically?",
+    "choices": ["A. CO(OH)2","B. HCl","C. H2SO3","D. HF"],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 19
+  },
+  {
+    "question": "How many gallons of motor gasoline does the average American consume in one year?",
+    "choices": [
+      "A. 150 gallons",
+      "B. 500 gallons",
+      "C. 310 gallons",
+      "D. 750 gallons"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 20
+  },
+  {
+    "question": "The salinization can be defined as",
+    "choices": [
+      "A. Accumulation of salts in the body",
+      "B. Accumulation of salts in water",
+      "C. Accumulation of salts in animals",
+      "D. Accumulation of salts in the soil"
+    ],
+    "answer": 4,
+    "difficulty": 2,
+    "available": true,
+    "id": 21
+  },
+  {
+    "question": "The main reason for blueness of the sky is",
+    "choices": [
+      "Due to the presence of water vapor",
+      "Due to the absorption of blue light due to the air",
+      "Due to the scattering of sunlight by air molecules",
+      "None of the above"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 22
+  },
+  {
+    "question": "Which of the following is the cause of soil pollution",
+    "choices": [
+      "Ozone",
+      "Aerosol",
+      "Acid rain",
+      "None of the above"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 23
+  },
+  {
+    "question": "The yellowness of the Taj Mahal is an effect of",
+    "choices": [
+      "Acid rain",
+      "Allergens",
+      "Ozone depletion",
+      "None of the above"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 24
+  },
+  {
+    "question": "Ecosystem can be defined as",
+    "choices": [
+      "A. a system of interdependent organisms sharing the same habitat",
+      "B. a community of animals who live in similar types of environments",
+      "C. places with common animals species",
+      "D. anywhere that has food water and shelter"
+    ],
+    "answer": 1,
+    "difficulty": 1,
+    "available": true,
+    "id": 25
+  },
+  {
+    "question": "The type of trees that shed leaves annually is called",
+    "choices": [
+      "A. Coniferous",
+      "B. Temperate coniferous",
+      "C. Deciduous",
+      "D. Taiga"
+    ],
+    "answer": 3,
+    "difficulty": 1,
+    "available": true,
+    "id": 26
+  },
+  {
+    "question": "ocean currents are also known as",
+    "choices": [
+      "A. Ocean Transport System",
+      "B. Wave carriers",
+      "C. Circulation waves",
+      "D. Ocean Conveyor System"
+    ],
+    "answer": 4,
+    "difficulty": 2,
+    "available": true,
+    "id": 27
+  },
+  {
+    "question": "A possible consequence that water pollution can cause is",
+    "choices": [
+      "A. soil fertility loss",
+      "B. downstream contamination",
+      "C. acid rain",
+      "D. heavy metals in soil"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 28
+  },
+  {
+    "question": "Why does smog get so bad?",
+    "choices": [
+      "A. air movements",
+      "B. ocean wave movements",
+      "C. shifts in the clouds",
+      "D. erosions"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 29
+  },
+  {
+    "question": "Which of the following is not an anthropogenic cause of flooding?",
+    "choices": [
+      "A. Dam failure",
+      "B. Urbanization",
+      "C. Deforestation",
+      "D. none of the above"
+    ],
+    "answer": 4,
+    "difficulty": 2,
+    "available": true,
+    "id": 30
+  },
+  {
+    "question": "Which of the following has then highest reflectivity of sunlight?",
+    "choices": [
+      "A. fresh snow",
+      "B. forests",
+      "C. grass",
+      "D. water bodies"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 31
+  },
+  {
+    "question": "Tropical cyclones are also known as",
+    "choices": [
+      "A. Hurricanes",
+      "B. Cyclones",
+      "C. Tornados",
+      "D. none of the above",
+      "E. all of the above"
+    ],
+    "answer": 5,
+    "difficulty": 3,
+    "available": true,
+    "id": 32
+  },
+  {
+    "question": "Arid areas are typically referred to as a",
+    "choices": [
+      "A. Steppe",
+      "B. Desert",
+      "C. Antipodes",
+      "D. Albedo"
+    ],
+    "answer": 2,
+    "difficulty": 1,
+    "available": true,
+    "id": 33
+  },
+  {
+    "question": "If it's summer in the northern hemisphere what season is it in the southern hemisphere?",
+    "choices": ["A. Winter","B. Autumn","C. Summer","D. Can't be determined"],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 34
+  },
+  {
+    "question": "Can there be snow in a desert?",
+    "choices": [
+      "A. Yes, but only in hot deserts at nighttime","B. Yes, but only in cold deserts which has high elevations","C. No, hot deserts and cold deserts both can't have snow","D. Yes, hot deserts and cold deserts both can have snow"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 35
+  },
+  {
+    "question": "Study of trends in human population growth and prediction of future growth is called",
+    "choices": [
+      "A. Demography",
+      "B. Biography",
+      "C. Paleography",
+      "D. Psychology"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 36
+  },
+  {
+    "question": "Zone consisting air water, and soil is known as",
+    "choices": ["A. Atmosphere","B. Hydrosphere","C. Biosphere","D. Lithosphere"],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 37
+  },
+  {
+    "question": "Earthworms and bacteria are called",
+    "choices": [
+      "A. Producers",
+      "B. Consumers",
+      "C. Decomposers",
+      "D. None of the above"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 38
+  },
+  {
+    "question": "Which of the following is not a type of volcano?",
+    "choices": [
+      "A. Composite",
+      "B. Shield",
+      "C. Cinder cone",
+      "D. Ash pile"
+    ],
+    "answer": 4,
+    "difficulty": 2,
+    "available": true,
+    "id": 39
+  },
+  {
+    "question": "What is the main man-made greenhouse gas?",
+    "choices": [
+      "A. Oxygen",
+      "B. Hydrogen",
+      "C. Carbon dioxide",
+      "D. Nitrogen"
+    ],
+    "answer": 3,
+    "difficulty": 1,
+    "available": true,
+    "id": 40
+  },
+  {
+    "question": "How does atmospheric circulation influence climate?",
+    "choices": [
+      "A. by producing ocean currents that cause tornadoes",
+      "B. by producing tornadoes that cause ocean currents",
+      "C. by distributing air that causes wind",
+      "D. by producing winds that distribute heat and moisture"
+    ],
+    "answer": 4,
+    "difficulty": 2,
+    "available": true,
+    "id": 41
+  },
+  {
+    "question": "How many percents of freshwater are on Earth?",
+    "choices": [
+      "A. 2%",
+      "B. 3%",
+      "C. 20%",
+      "D. 25%"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 42
+  },
+  {
+    "question": "Which of the following is not one of the UN's Sustainable Development Goals?",
+    "choices": [
+      "A. Freshwater preservation",
+      "B. Responsible consumption",
+      "C. Life on land",
+      "D. Renewable energy"
+    ],
+    "answer": 1,
+    "difficulty": 3,
+    "available": true,
+    "id": 43
+  },
+  {
+    "question": "Soil is a",
+    "choices": [
+      "A. renewable resource",
+      "B. potential resource",
+      "C. non-renewable resource",
+      "D. none of the above"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 44
+  },
+  {
+    "question": "The only greenhouse gas that is not naturally present in the atmosphere is",
+    "choices": [
+      "A. Carbon dioxide",
+      "B. Methane",
+      "C. CFCs",
+      "d. Methane dioxide"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 45
+  },
+  {
+    "question": "The part of the plant that evaporates water is",
+    "choices": [
+      "Fruit",
+      "Stomata",
+      "Root",
+      "None of the above"
+    ],
+    "answer": 2,
+    "difficulty": 1,
+    "available": true,
+    "id": 46
+  },
+  {
+    "question": "Which of the following is a renewable source of energy",
+    "choices": [
+      "Coal",
+      "Uranium",
+      "Wind",
+      "None of the above"
+    ],
+    "answer": 3,
+    "difficulty": 1,
+    "available": true,
+    "id": 47
+  },
+  {
+    "question": "The ozone layer is present in",
+    "choices": [
+      "Mesosphere",
+      "Thermosphere",
+      "Stratosphere",
+      "None of the above"
+    ],
+    "answer": 3,
+    "difficulty": 1,
+    "available": true,
+    "id": 48
+  },
+  {
+    "question": "Which of the following is the first trophic level in the food chain?",
+    "choices": [
+      "Herbivores",
+      "Carnivores",
+      "Green Plants",
+      "All of the above"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 49
+  },
+  {
+    "question": "Why carbon dioxide is called a greenhouse gas?",
+    "choices": [
+      "Because they absorb heat",
+      "Because they absorb moisture",
+      "Because they absorb oxygen",
+      "Because they absorb hydrogen"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 50
+  },
+  {
+    "question": "15. Which of the following is NOT a primary pollutant?",
+    "choices": [
+      "Oxygen",
+      "Ground-level ozone",
+      "Carbon monoxide",
+      "Carbon dioxide"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 51
+  },
+  {
+    "question": "Why are radiations harmful?",
+    "choices": [
+      "Radiations leads to skin cancer",
+      "Radiations cause anemia",
+      "Radiations changes body tissues",
+      "Radiations are not stable"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 52
+  },
+  {
+    "question": "Which of the following statements are correct regarding Lichens?\n1) They are a peculiar combination of an alga and a fungus.\n2) They grow on rocks tree-trunks, deadwood, etc.",
+    "choices": [
+      "[A] Only 1","[B] Only 2","[C] Both 1 & 2","[D] Neither 1 & 2"
+    ],
+    "answer": 3,
+    "difficulty": 3,
+    "available": true,
+    "id": 53
+  },
+  {
+    "question": "Trophic level interaction involves which of the following concepts?\n1. Food Chain\n2. Food Web\n3. Ecological Pyramids\nSelect the correct option from the codes given below:",
+    "choices": [
+      "[A] Only 1 & 2","[B] Only 2 & 3","[C] Only 1 & 3","[D] 1"
+    ],
+    "answer": 4,
+    "difficulty": 3,
+    "available": true,
+    "id": 54
+  },
+  {
+    "question": "Which of the following is/are types of pollution that affect the environment?",
+    "choices": [
+      "Air pollution",
+      "Water pollution",
+      "Land pollution",
+      "All of the mentioned"
+    ],
+    "answer": 4,
+    "difficulty": 1,
+    "available": true,
+    "id": 55
+  },
+  {
+    "question": "CNG stands for -",
+    "choices": [
+      "Common Natural gas",
+      "Compressed National gas",
+      "Compressed Natural gas",
+      "Certified National gas"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 56
+  },
+  {
+    "question": "Which of the following gas destroys the chlorophyll present in the plant leaves?",
+    "choices": [
+      "SO3",
+      "H2S",
+      "SO2",
+      "CO2"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 57
+  },
+  {
+    "question": "Which of the following is said to be a biodegradable waste?",
+    "choices": [
+      "Plastics",
+      "Glasses",
+      "Eggshell",
+      "Polythene"
+    ],
+    "answer": 3,
+    "difficulty": 1,
+    "available": true,
+    "id": 58
+  },
+  {
+    "question": "Which of the following gas is present in the air in maximum amount?",
+    "choices": [
+      "Nitrogen",
+      "Oxygen",
+      "Carbon dioxide",
+      "Methane"
+    ],
+    "answer": 1,
+    "difficulty": 1,
+    "available": true,
+    "id": 59
+  },
+  {
+    "question": "What is the water vapor?",
+    "choices": [
+      "It is the gaseous phase of water",
+      "It is a rain droplet",
+      "Water vapor is the cloud droplet",
+      "None of the above"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 60
+  },
+  {
+    "question": "Which of the following is necessary for photosynthesis?",
+    "choices": [
+      "Sulphur",
+      "Phosphorus",
+      "Chlorophyll",
+      "Chloroform"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 61
+  },
+  {
+    "question": "Which region is the one in which the Great Green Wall project is being carried out?",
+    "choices": [
+      "East African Savannah",
+      "Sahel",
+      "Indo-Gangetic Plain",
+      "Tibetan Plateau"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 62
+  },
+  {
+    "question": "What is the name of the phenomenon that the Great Green Wall project is trying to prevent?",
+    "choices": [
+      "Flooding",
+      "Sandstorms",
+      "Desertification",
+      "Deforestation"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 63
+  },
+  {
+    "question": "Which of the following countries is not in the Great Green Wall project?",
+    "choices": [
+      "Egypt",
+      "Ethiopia",
+      "Nigeria",
+      "Djibouti"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 64
+  },
+  {
+    "question": "Which country is famous for its long history of land reclamation and water treatment constructing many polders and dikes in the process?",
+    "choices": ["Denmark","The Netherlands","South Korea","Singapore"],
+    "answer": 2,
+    "difficulty": 1,
+    "available": true,
+    "id": 65
+  },
+  {
+    "question": "Which country is digitalizing their nation due to the threat that rising sea levels pose on it?",
+    "choices": [
+      "Tonga",
+      "Maldives",
+      "Bahamas",
+      "Tuvalu"
+    ],
+    "answer": 4,
+    "difficulty": 2,
+    "available": true,
+    "id": 66
+  },
+  {
+    "question": "What is the predicted date by which Tuvalu will be fully submerged underwater?",
+    "choices": [
+      "2050",
+      "2070",
+      "2100",
+      "2200"
+    ],
+    "answer": 3,
+    "difficulty": 3,
+    "available": true,
+    "id": 67
+  },
+  {
+    "question": "What is the name of the tropical saltwater plant that helps safeguard coastal ecosystems?",
+    "choices": [
+      "Kelp",
+      "Mangroves",
+      "Palm tree",
+      "Tanoak"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 68
+  },
+  {
+    "question": "Where was the first COP held in 1995?",
+    "choices": [
+      "Berlin, Germany","Oslo, Norway", "Dallas, Texas, USA","Singapore, Singapore"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 69
+  },
+  {
+    "question": "Which country is building the Great Man-Made River project to bring water from deep in the desert to its cities for human use?",
+    "choices": [
+      "Saudi Arabia",
+      "Oman",
+      "Chile",
+      "Libya"
+    ],
+    "answer": 4,
+    "difficulty": 2,
+    "available": true,
+    "id": 70
+  },
+  {
+    "question": "Which Indian city is famous for its severe pollution during early winter of each year?",
+    "choices": [
+      "Delhi/New Delhi",
+      "Mumbai",
+      "Kolkata",
+      "Lahore"
+    ],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 71
+  },
+  {
+    "question": "Which of the following is not one of the reasons behind Delhi's severe air pollution?",
+    "choices": [
+      "(1) Lights being burnt during Diwali the Hindu festival of lights","(2) Crops being burnt in the nearby countryside","(3) Factory smog from neighboring plants","(4) Sandstorms from the nearby desert"
+    ],
+    "answer": 4,
+    "difficulty": 2,
+    "available": true,
+    "id": 72
+  },
+  {
+    "question": "Which body of water was dried up as a result of excessive water control from the Soviet Union?",
+    "choices": [
+      "Lake Baikal",
+      "Aral Sea",
+      "Amu Darya River",
+      "Neva River"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 73
+  },
+  {
+    "question": "Sand from which desert swept into Northern China recently moving through Beijing and proceeding south to reach Shanghai?",
+    "choices": ["Taklamakan Desert","Mongolian Desert","Gobi Desert","Atacama Desert"],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 74
+  },
+  {
+    "question": "How many farm fires (crop burnings) occurred in the Indian state of Punjab in the Fall of 2022?",
+    "choices": [
+      "Around 6,000","Around 10,000","Around 16,000","Around 20,000"
+    ],
+    "answer": 3,
+    "difficulty": 2,
+    "available": true,
+    "id": 75
+  },
+  {
+    "question": "About what percent of Delhi's PM 2.5 levels were caused by farm fires?",
+    "choices": [
+      "25%",
+      "35%",
+      "45%",
+      "50%"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 76
+  },
+  {
+    "question": "Which island was home to the Dodo Bird which became extinct in 1681 due to excessive hunting?",
+    "choices": ["Mauritius","Madagascar","Réunion","Galápagos"],
+    "answer": 1,
+    "difficulty": 2,
+    "available": true,
+    "id": 77
+  },
+  {
+    "question": "Which government banned oil exploration in their territories due to climate concerns?",
+    "choices": [
+      "Venezuela",
+      "Greenland",
+      "Argentina",
+      "Namibia"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 78
+  },
+  {
+    "question": "Which city is the most sustainable city in the world as of right now?",
+    "choices": [
+      "Reykjavik, Iceland",
+      "Singapore, Singapore",
+      "Amsterdam, Netherlands",
+      "Copenhagen, Denmark"
+    ],
+    "answer": 4,
+    "difficulty": 2,
+    "available": true,
+    "id": 79
+  },
+  {
+    "question": "What city is deemed the \"Least Sustainable City in the World\"?",
+    "choices": [
+      "Mumbai, India",
+      "Phoenix, Arizona",
+      "Sao Paulo, Brazil",
+      "Denver, Colorado"
+    ],
+    "answer": 2,
+    "difficulty": 2,
+    "available": true,
+    "id": 80
+  }
+]

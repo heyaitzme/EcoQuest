@@ -1,33 +1,74 @@
-<view class="quiz-container">
-  <!-- Header with Progress -->
+<view class="container">
+  <!-- Score Header -->
   <view class="header">
-    <progress class="progress-bar" percent="{{progress}}" show-info />
-    <text class="level-title">Level {{currentLevel}}: Environmental Quiz</text>
-  </view>
-
-  <!-- Question Section -->
-  <view class="question-section" animation="{{fadeInAnimation}}">
-    <text class="question-text">{{currentQuestion.question}}</text>
-  </view>
-
-  <!-- Options Section -->
-  <view class="options-section">
-    <block wx:for="{{currentQuestion.options}}" wx:key="index">
-      <button class="option-button" bindtap="selectOption" data-index="{{index}}" animation="{{shakeAnimation}}">
-        {{item}}
+    <text class="score">Score: {{score}}</text>
+    <view class="header-buttons">
+      <button bindtap="refreshQuiz" size="mini">Refresh</button>
+      <button 
+        bindtap="resetUsedQuestions" 
+        size="mini" 
+        type="warn"
+        style="margin-left: 10px;"
+      >
+        Reset Quiz
       </button>
-    </block>
+    </view>    
   </view>
 
-  <!-- Next Button -->
-  <button class="next-button" bindtap="nextQuestion" hidden="{{!showNextButton}}">
-    Next
-  </button>
+  <!-- Loading State -->
+  <view wx:if="{{loading}}" class="loading">
+    <text>Loading Today's Quiz...</text>
+  </view>
 
-  <!-- Confetti Celebration -->
-  <view class="confetti-container" hidden="{{!showConfetti}}">
-    <block wx:for="{{[0,1,2,3,4,5,6,7,8,9,10]}}" wx:key="index">
-      <view class="confetti" style="left: {{index*10}}%;"></view>
-    </block>
+  <!-- Main Game Board -->
+  <view wx:else class="game-board">
+    <!-- Difficulty Categories -->
+    <view class="row categories">
+      <view wx:for="{{['Difficulty 1', 'Difficulty 2', 'Difficulty 3']}}" wx:key="index" class="cell category">
+        {{item}}
+      </view>
+    </view>
+
+    <!-- Questions Grid -->
+    <view wx:for="{{questions}}" wx:key="rowIndex" class="row">
+      <view 
+        wx:for="{{row}}" 
+        wx:key="colIndex"
+        class="cell question difficulty-{{rowIndex + 1}} {{item.answered ? 'answered' : ''}}"
+        bindtap="showQuestion"
+        data-row="{{rowIndex}}"
+        data-col="{{colIndex}}"
+      >
+        <text wx:if="{{!item.answered}}">${{(colIndex + 1) * 100 * (rowIndex + 1)}}</text>
+        <text wx:else>✓</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Question Modal -->
+    <view wx:if="{{showModal}}" class="question-modal">
+    <view class="modal-mask" bindtap="closeModal"></view>
+    <view class="modal-content">
+      <text class="difficulty">Difficulty {{currentQuestion.difficulty}}</text>
+      <text class="question-text">{{currentQuestion.question}}</text>
+      <radio-group bindchange="handleAnswer">
+        <label 
+          wx:for="{{currentQuestion.choices}}" 
+          wx:key="index"
+          class="choice"
+        >
+          <radio value="{{index}}" />{{item}}
+        </label>
+      </radio-group>
+      <view class="button-group">
+        <button type="primary" bindtap="submitAnswer">Submit</button>
+        <button bindtap="closeModal">Close</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- Error Display -->
+  <view wx:if="{{error}}" class="error">
+    {{error}}
   </view>
 </view>

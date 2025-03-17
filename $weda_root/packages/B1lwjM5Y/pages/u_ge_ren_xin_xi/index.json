@@ -1,0 +1,12 @@
+{
+  "renderer": "webview",
+  "usingComponents": {
+  "a": "/$weda_root/materials/gsd-h5-react/components/wd-form/index",
+  "b": "/$weda_root/materials/gsd-h5-react/components/container/index",
+  "c": "/$weda_root/materials/gsd-h5-react/components/wd-upload-image/index",
+  "d": "/$weda_root/materials/gsd-h5-react/components/wd-input/index",
+  "e": "/$weda_root/materials/gsd-h5-react/components/wd-button/index",
+  "wd-info": "/$weda_root/common/info/index"
+},
+"backgroundColor":"#FFFFFF","navigationStyle":"default","pageOrientation":"portrait","backgroundColorTop":"#FFFFFF","backgroundTextStyle":"dark","backgroundColorBottom":"#FFFFFF","navigationBarTextStyle":"black","navigationBarTitleText":"个人信息","navigationBarBackgroundColor":"#FFFFFF","onReachBottomDistance":50
+}

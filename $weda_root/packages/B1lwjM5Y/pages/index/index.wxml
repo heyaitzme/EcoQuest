@@ -1,0 +1,73 @@
+<page-meta page-style="{{pageStyle}}">
+	<view id="wd-page-root" wx:if="{{weDaHasLogin && !_expiredMessage}}" data-weui-theme="light" class="wd-mp-root">
+		<a id="container2" style="{{container2.style}}" className="{{container2.className}}" data="{{container2.data}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+			<b id="image1" style="{{image1.style}}" className="{{image1.className}}" alt="{{image1.alt}}" fit="{{image1.fit}}" src="{{image1.src}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+		</a>
+		<a id="container1" style="{{container1.style}}" className="{{container1.className}}" data="{{container1.data}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+			<a id="container3" style="{{container3.style}}" className="{{container3.className}}" data="{{container3.data}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+				<b id="image2" style="{{image2.style}}" className="{{image2.className}}" alt="{{image2.alt}}" fit="{{image2.fit}}" src="{{image2.src}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+				<c id="text1" style="{{text1.style}}" className="{{text1.className}}" text="{{text1.text}}" maxLines="{{text1.maxLines}}" bind:attached="__mnt__" bind:detached="__unmnt__" bind:tap="ontext1$tap" bind:wh2200gi95d_success="ontext1$wh2200gi95d_success">{{text1.text}}</c>
+			</a>
+			<d id="grid2" style="{{grid2.style}}" className="{{grid2.className}}" gutterX="{{grid2.gutterX}}" template="{{grid2.template}}" bind:attached="__mnt__" bind:detached="__unmnt__" bind:tap="ongrid2$tap">
+				<e id="row2" style="{{row2.style}}" className="{{row2.className}}" alignItems="{{row2.alignItems}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+					<f id="col3" style="{{col3.style}}" className="{{col3.className}}" alignSelf="{{col3.alignSelf}}" widthType="{{col3.widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<g id="icon5" style="{{icon5.style}}" className="{{icon5.className}}" name="{{icon5.name}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+					</f>
+					<f id="col4" style="{{col4.style}}" className="{{col4.className}}" alignSelf="{{col4.alignSelf}}" widthType="{{col4.widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<c id="text2" style="{{text2.style}}" className="{{text2.className}}" text="{{text2.text}}" maxLines="{{text2.maxLines}}" bind:attached="__mnt__" bind:detached="__unmnt__">{{text2.text}}</c>
+					</f>
+					<f id="col5" style="{{col5.style}}" className="{{col5.className}}" alignSelf="{{col5.alignSelf}}" widthType="{{col5.widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<g id="icon1" style="{{icon1.style}}" className="{{icon1.className}}" name="{{icon1.name}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+					</f>
+				</e>
+			</d>
+			<h id="divider1" style="{{divider1.style}}" className="{{divider1.className}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+			<d id="grid3" style="{{grid3.style}}" className="{{grid3.className}}" gutterX="{{grid3.gutterX}}" template="{{grid3.template}}" bind:attached="__mnt__" bind:detached="__unmnt__" bind:tap="ongrid3$tap">
+				<e id="row4" style="{{row4.style}}" className="{{row4.className}}" alignItems="{{row4.alignItems}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+					<f id="col7" style="{{col7.style}}" className="{{col7.className}}" alignSelf="{{col7.alignSelf}}" widthType="{{col7.widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<g id="icon6" style="{{icon6.style}}" className="{{icon6.className}}" name="{{icon6.name}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+					</f>
+					<f id="col8" style="{{col8.style}}" className="{{col8.className}}" alignSelf="{{col8.alignSelf}}" widthType="{{col8.widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<c id="text3" style="{{text3.style}}" className="{{text3.className}}" text="{{text3.text}}" maxLines="{{text3.maxLines}}" bind:attached="__mnt__" bind:detached="__unmnt__">{{text3.text}}</c>
+					</f>
+					<f id="col9" style="{{col9.style}}" className="{{col9.className}}" alignSelf="{{col9.alignSelf}}" widthType="{{col9.widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<g id="icon2" style="{{icon2.style}}" className="{{icon2.className}}" name="{{icon2.name}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+					</f>
+				</e>
+			</d>
+			<h id="divider2" style="{{divider2.style}}" className="{{divider2.className}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+			<d id="grid4" style="{{grid4.style}}" className="{{grid4.className}}" gutterX="{{grid4.gutterX}}" template="{{grid4.template}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+				<e id="row6" style="{{row6.style}}" className="{{row6.className}}" alignItems="{{row6.alignItems}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+					<f id="col11" style="{{col11.style}}" className="{{col11.className}}" alignSelf="{{col11.alignSelf}}" widthType="{{col11.widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<g id="icon7" style="{{icon7.style}}" className="{{icon7.className}}" name="{{icon7.name}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+					</f>
+					<f id="col12" style="{{col12.style}}" className="{{col12.className}}" alignSelf="{{col12.alignSelf}}" widthType="{{col12.widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<i id="customerService1" style="{{customerService1.style}}" className="{{customerService1.className}}" template="{{customerService1.template}}" sessionFrom="{{customerService1.sessionFrom}}" sendMessageImg="{{customerService1.sendMessageImg}}" sendMessagePath="{{customerService1.sendMessagePath}}" showMessageCard="{{customerService1.showMessageCard}}" sendMessageTitle="{{customerService1.sendMessageTitle}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+							<c id="text4" style="{{text4.style}}" className="{{text4.className}}" text="{{text4.text}}" maxLines="{{text4.maxLines}}" bind:attached="__mnt__" bind:detached="__unmnt__">{{text4.text}}</c>
+						</i>
+					</f>
+					<f id="col13" style="{{col13.style}}" className="{{col13.className}}" alignSelf="{{col13.alignSelf}}" widthType="{{col13.widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<g id="icon3" style="{{icon3.style}}" className="{{icon3.className}}" name="{{icon3.name}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+					</f>
+				</e>
+			</d>
+			<h id="divider3" style="{{divider3.style}}" className="{{divider3.className}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+			<d id="grid5" style="{{grid5.style}}" className="{{grid5.className}}" gutterX="{{grid5.gutterX}}" template="{{grid5.template}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+				<e id="row8" style="{{row8.style}}" className="{{row8.className}}" alignItems="{{row8.alignItems}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+					<f id="col15" style="{{col15.style}}" className="{{col15.className}}" alignSelf="{{col15.alignSelf}}" widthType="{{col15.widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<g id="icon8" style="{{icon8.style}}" className="{{icon8.className}}" name="{{icon8.name}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+					</f>
+					<f id="col16" style="{{col16.style}}" className="{{col16.className}}" alignSelf="{{col16.alignSelf}}" widthType="{{col16.widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<j id="share1" style="{{share1.style}}" className="{{share1.className}}" path="{{share1.path}}" size="{{share1.size}}" text="{{share1.text}}" type="{{share1.type}}" image="{{share1.image}}" title="{{share1.title}}" params="{{share1.params}}" withParams="{{share1.withParams}}" bind:attached="__mnt__" bind:detached="__unmnt__">{{share1.text}}</j>
+					</f>
+					<f id="col17" style="{{col17.style}}" className="{{col17.className}}" alignSelf="{{col17.alignSelf}}" widthType="{{col17.widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<g id="icon4" style="{{icon4.style}}" className="{{icon4.className}}" name="{{icon4.name}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+					</f>
+				</e>
+			</d>
+			<h id="divider4" style="{{divider4.style}}" className="{{divider4.className}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+			<k id="button1" style="{{button1.style}}" className="{{button1.className}}" icon="{{button1.icon}}" text="{{button1.text}}" block="{{button1.block}}" theme="{{button1.theme}}" bind:attached="__mnt__" bind:detached="__unmnt__">{{button1.text}}</k>
+		</a>
+	</view>
+	<wd-info wx:if="{{weDaHasLogin === false && !_expiredMessage}}" message="无权限访问" type="auth" enableCustom="true" pageUUID="B1lwjM5Y/index" error="{{loginError}}"/>
+</page-meta>

@@ -6,23 +6,41 @@
     "pages/profile/profile",
     "pages/games/games",
     "pages/community/community",
-    "pages/challenges/challenges"
+    "$weda_root/pages/index/index",
+    "pages/leaderboard/leaderboard"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
-  },
-  "style": "v2",
-  "renderer": "skyline",
-  "rendererOptions": {
-    "skyline": {
-      "defaultDisplayBlock": true,
-      "disableABTest": true,
-      "sdkVersionBegin": "3.0.0",
-      "sdkVersionEnd": "15.255.255"
-    }
+    "navigationBarTextStyle": "white"
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "subPackages": [
+    {
+      "root": "$weda_root/packages/$wd_system",
+      "name": "wd-sys-module",
+      "pages": [
+        "pages/login/index"
+      ]
+    },
+    {
+      "root": "$weda_root/packages/B1lwjM5Y",
+      "pages": [
+        "pages/index/index",
+        "pages/u_ge_ren_xin_xi/index",
+        "pages/u_chang_jian_wen_ti/index"
+      ]
+    }
+  ],
+  "envVersion": "develop",
+  "libVersion": "3.7.3",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true
+  }
 }

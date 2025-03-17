@@ -1,0 +1,14 @@
+<page-meta page-style="{{pageStyle}}">
+	<view id="wd-page-root" wx:if="{{weDaHasLogin && !_expiredMessage}}" data-weui-theme="light" class="wd-mp-root">
+		<a id="form1" style="{{form1.style}}" className="{{form1.className}}" _id="{{form1['_id']}}" value="{{form1.value}}" lgWidth="{{form1.lgWidth}}" formType="{{form1.formType}}" methodCreate="{{form1.methodCreate}}" methodUpdate="{{form1.methodUpdate}}" paramGetItem="{{form1.paramGetItem}}" formType_bind="{{form1.formType_bind}}" initialValues="{{form1.initialValues}}" methodGetItem="{{form1.methodGetItem}}" datasourceType="{{form1.datasourceType}}" bind:attached="__mnt__" bind:detached="__unmnt__" bind:onDataChange="onform1$onDataChange">
+			<b id="container1" style="{{container1.style}}" className="{{container1.className}}" bind:attached="__mnt__" bind:detached="__unmnt__" slot="contentSlot">
+				<c id="uploadImage1" style="{{uploadImage1.style}}" className="{{uploadImage1.className}}" name="{{uploadImage1.name}}" label="{{uploadImage1.label}}" value="{{uploadImage1.value}}" single="{{uploadImage1.single}}" status="{{uploadImage1.status}}" required="{{uploadImage1.required}}" callbacks="{{uploadImage1.callbacks}}" showShape="{{uploadImage1.showShape}}" requiredMsg="{{uploadImage1.requiredMsg}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+				<d id="input1" style="{{input1.style}}" className="{{input1.className}}" name="{{input1.name}}" extra="{{input1.extra}}" label="{{input1.label}}" status="{{input1.status}}" required="{{input1.required}}" template="{{input1.template}}" inputValue="{{input1.inputValue}}" prefixIcon="{{input1.prefixIcon}}" prefixType="{{input1.prefixType}}" suffixIcon="{{input1.suffixIcon}}" suffixType="{{input1.suffixType}}" placeholder="{{input1.placeholder}}" requiredMsg="{{input1.requiredMsg}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+				<b id="container2" style="{{container2.style}}" className="{{container2.className}}" data="{{container2.data}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+					<e id="button1" style="{{button1.style}}" className="{{button1.className}}" icon="{{button1.icon}}" text="{{button1.text}}" block="{{button1.block}}" bind:attached="__mnt__" bind:detached="__unmnt__" bind:tap="onbutton1$tap" bind:w0280auq5ch_success="onbutton1$w0280auq5ch_success" bind:wdqstak8gv5_success="onbutton1$wdqstak8gv5_success" bind:wt1gc8gzwl4_success="onbutton1$wt1gc8gzwl4_success" bind:w0280auq5ch_fail="onbutton1$w0280auq5ch_fail">{{button1.text}}</e>
+				</b>
+			</b>
+		</a>
+	</view>
+	<wd-info wx:if="{{weDaHasLogin === false && !_expiredMessage}}" message="无权限访问" type="auth" enableCustom="true" pageUUID="B1lwjM5Y/u_ge_ren_xin_xi" error="{{loginError}}"/>
+</page-meta>

@@ -1,0 +1,18 @@
+{
+  "renderer": "webview",
+  "usingComponents": {
+  "a": "/$weda_root/materials/gsd-h5-react/components/container/index",
+  "b": "/$weda_root/materials/gsd-h5-react/components/wd-image/index",
+  "c": "/$weda_root/materials/gsd-h5-react/components/wd-text/index",
+  "d": "/$weda_root/materials/gsd-h5-react/components/grid/index",
+  "e": "/$weda_root/materials/gsd-h5-react/components/grid/row/index",
+  "f": "/$weda_root/materials/gsd-h5-react/components/grid/col/index",
+  "g": "/$weda_root/materials/gsd-h5-react/components/wd-icon/index",
+  "h": "/$weda_root/materials/gsd-h5-react/components/wd-divider/index",
+  "i": "/$weda_root/materials/gsd-h5-react/components/customer-service/index",
+  "j": "/$weda_root/materials/gsd-h5-react/components/wxOpenApi/share/index",
+  "k": "/$weda_root/materials/gsd-h5-react/components/wd-button/index",
+  "wd-info": "/$weda_root/common/info/index"
+},
+"backgroundColor":"#FFFFFF","navigationStyle":"default","pageOrientation":"portrait","backgroundColorTop":"#FFFFFF","backgroundTextStyle":"dark","backgroundColorBottom":"#FFFFFF","navigationBarTextStyle":"black","navigationBarTitleText":"个人中心","navigationBarBackgroundColor":"#FFFFFF","onReachBottomDistance":50
+}

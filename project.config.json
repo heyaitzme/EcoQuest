@@ -1,5 +1,5 @@
 {
-  "appid": "wx047c6ea030c8c5e0",
+  "appid": "wx24156eb2aeb2868d",
   "compileType": "miniprogram",
   "libVersion": "trial",
   "packOptions": {
@@ -13,7 +13,17 @@
     "minified": true,
     "enhance": true,
     "showShadowRootInWxmlPanel": true,
-    "packNpmRelationList": [],
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "$weda_root/package.json",
+        "miniprogramNpmDistDir": "$weda_root"
+      },
+      {
+        "packageJsonPath": "$weda_root/packages/$wd_system/package.json",
+        "miniprogramNpmDistDir": "$weda_root/packages/$wd_system"
+      }
+    ],
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -24,5 +34,7 @@
   "editorSetting": {
     "tabIndent": "auto",
     "tabSize": 2
-  }
+  },
+  "cloudfunctionRoot": "cloud/",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/"
 }

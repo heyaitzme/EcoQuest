@@ -1,0 +1,30 @@
+<page-meta page-style="{{pageStyle}}">
+	<view id="wd-page-root" wx:if="{{weDaHasLogin && !_expiredMessage}}" data-weui-theme="light" class="wd-mp-root">
+		<a id="container2" style="{{container2.style}}" className="{{container2.className}}" data="{{container2.data}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+			<block id="{{'repeater1_item'+ '-' + irepeater1_item}}" wx:for="{{repeater1_item}}" wx:for-index="irepeater1_item" wx:key="_key">
+				<b id="{{'grid2'+ '-' + irepeater1_item}}" style="{{grid2[irepeater1_item].style}}" className="{{grid2[irepeater1_item].className}}" template="{{grid2[irepeater1_item].template}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+					<c id="{{'row2'+ '-' + irepeater1_item}}" style="{{row2[irepeater1_item].style}}" className="{{row2[irepeater1_item].className}}" colCount="{{row2[irepeater1_item].colCount}}" alignItems="{{row2[irepeater1_item].alignItems}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+						<d id="{{'col3'+ '-' + irepeater1_item}}" style="{{col3[irepeater1_item].style}}" className="{{col3[irepeater1_item].className}}" alignSelf="{{col3[irepeater1_item].alignSelf}}" widthType="{{col3[irepeater1_item].widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+							<e id="{{'text2'+ '-' + irepeater1_item}}" style="{{text2[irepeater1_item].style}}" className="{{text2[irepeater1_item].className}}" text="{{text2[irepeater1_item].text}}" maxLines="{{text2[irepeater1_item].maxLines}}" bind:attached="__mnt__" bind:detached="__unmnt__">{{text2[irepeater1_item].text}}</e>
+						</d>
+						<d id="{{'col4'+ '-' + irepeater1_item}}" style="{{col4[irepeater1_item].style}}" className="{{col4[irepeater1_item].className}}" alignSelf="{{col4[irepeater1_item].alignSelf}}" widthType="{{col4[irepeater1_item].widthType}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+							<f id="{{'card2'+ '-' + irepeater1_item}}" style="{{card2[irepeater1_item].style}}" className="{{card2[irepeater1_item].className}}" template="{{card2[irepeater1_item].template}}" showContent="{{card2[irepeater1_item].showContent}}" showDivider="{{card2[irepeater1_item].showDivider}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+								<a id="{{'container3'+ '-' + irepeater1_item}}" style="{{container3[irepeater1_item].style}}" className="{{container3[irepeater1_item].className}}" data="{{container3[irepeater1_item].data}}" bind:attached="__mnt__" bind:detached="__unmnt__" slot="headerSlot">
+									<e id="{{'text3'+ '-' + irepeater1_item}}" style="{{text3[irepeater1_item].style}}" className="{{text3[irepeater1_item].className}}" text="{{text3[irepeater1_item].text}}" level="{{text3[irepeater1_item].level}}" maxLines="{{text3[irepeater1_item].maxLines}}" bind:attached="__mnt__" bind:detached="__unmnt__">{{text3[irepeater1_item].text}}</e>
+								</a>
+								<e id="{{'text6'+ '-' + irepeater1_item}}" style="{{text6[irepeater1_item].style}}" className="{{text6[irepeater1_item].className}}" text="{{text6[irepeater1_item].text}}" maxLines="{{text6[irepeater1_item].maxLines}}" bind:attached="__mnt__" bind:detached="__unmnt__" slot="contentSlot">{{text6[irepeater1_item].text}}</e>
+								<g id="{{'icon2'+ '-' + irepeater1_item}}" style="{{icon2[irepeater1_item].style}}" className="{{icon2[irepeater1_item].className}}" size="{{icon2[irepeater1_item].size}}" name="{{icon2[irepeater1_item].name}}" bind:attached="__mnt__" bind:detached="__unmnt__" bind:tap="onicon2$tap" slot="headerSlot"/>
+							</f>
+						</d>
+					</c>
+				</b>
+				<h id="{{'divider2'+ '-' + irepeater1_item}}" style="{{divider2[irepeater1_item].style}}" className="{{divider2[irepeater1_item].className}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+			</block>
+		</a>
+		<a id="container1" style="{{container1.style}}" className="{{container1.className}}" data="{{container1.data}}" bind:attached="__mnt__" bind:detached="__unmnt__">
+			<g id="icon1" style="{{icon1.style}}" className="{{icon1.className}}" name="{{icon1.name}}" size="{{icon1.size}}" bind:attached="__mnt__" bind:detached="__unmnt__"/>
+			<e id="text1" style="{{text1.style}}" className="{{text1.className}}" text="{{text1.text}}" maxLines="{{text1.maxLines}}" inheritColor="{{text1.inheritColor}}" bind:attached="__mnt__" bind:detached="__unmnt__">{{text1.text}}</e>
+		</a>
+	</view>
+	<wd-info wx:if="{{weDaHasLogin === false && !_expiredMessage}}" message="无权限访问" type="auth" enableCustom="true" pageUUID="B1lwjM5Y/u_chang_jian_wen_ti" error="{{loginError}}"/>
+</page-meta>

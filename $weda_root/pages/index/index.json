@@ -1,0 +1,7 @@
+{
+  "renderer": "webview",
+  "usingComponents": {
+  "wd-info": "/$weda_root/common/info/index"
+},
+"backgroundColor":"#FFFFFF","navigationStyle":"default","pageOrientation":"portrait","backgroundColorTop":"#FFFFFF","backgroundTextStyle":"dark","backgroundColorBottom":"#FFFFFF","navigationBarTextStyle":"black","navigationBarTitleText":"主应用(在搭建微信云模板时为空壳)","navigationBarBackgroundColor":"#FFFFFF","onReachBottomDistance":50
+}

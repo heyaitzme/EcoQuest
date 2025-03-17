@@ -1,0 +1,15 @@
+{
+  "renderer": "webview",
+  "usingComponents": {
+  "a": "/$weda_root/materials/gsd-h5-react/components/container/index",
+  "b": "/$weda_root/materials/gsd-h5-react/components/grid/index",
+  "c": "/$weda_root/materials/gsd-h5-react/components/grid/row/index",
+  "d": "/$weda_root/materials/gsd-h5-react/components/grid/col/index",
+  "e": "/$weda_root/materials/gsd-h5-react/components/wd-text/index",
+  "f": "/$weda_root/materials/gsd-h5-react/components/wd-card/index",
+  "g": "/$weda_root/materials/gsd-h5-react/components/wd-icon/index",
+  "h": "/$weda_root/materials/gsd-h5-react/components/wd-divider/index",
+  "wd-info": "/$weda_root/common/info/index"
+},
+"backgroundColor":"#FFFFFF","navigationStyle":"default","pageOrientation":"portrait","backgroundColorTop":"#FFFFFF","backgroundTextStyle":"dark","backgroundColorBottom":"#FFFFFF","navigationBarTextStyle":"black","navigationBarTitleText":"常见问题","navigationBarBackgroundColor":"#FFFFFF","onReachBottomDistance":50
+}
